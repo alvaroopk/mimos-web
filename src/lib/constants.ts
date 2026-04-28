@@ -22,3 +22,9 @@ export const NAV_LINKS = [
   { label: "Sobre Nosotros", href: "/sobre-nosotros" },
   { label: "Contacto", href: "/contacto" },
 ] as const;
+
+// URL de la web original del cliente (usada en el banner de demo)
+export const ORIGINAL_URL = "https://cvmimos.com/";
+
+// Cambiar a true para habilitar la indexación en Google
+export const SITE_INDEXED = false;

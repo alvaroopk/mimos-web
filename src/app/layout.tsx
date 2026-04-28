@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import DemoBanner from "@/components/DemoBanner";
+import { SITE_INDEXED } from "@/lib/constants";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +33,14 @@ export const metadata: Metadata = {
       "Clínica veterinaria en Murcia con más de 9 años de experiencia. Equipo de 6 profesionales, laboratorio propio y medicina felina especializada.",
     type: "website",
   },
+  robots: {
+    index: SITE_INDEXED,
+    follow: SITE_INDEXED,
+    googleBot: {
+      index: SITE_INDEXED,
+      follow: SITE_INDEXED,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -45,6 +55,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <DemoBanner />
       </body>
     </html>
   );
